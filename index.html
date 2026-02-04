@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TEACHER DASHBOARD</h1>
+        </div>
+
+        <!-- SIDEBAR: TEACHER PROFILE -->
+        <div class="sidebar">
+            <div class="profile" style="margin-top: 70px;">
+                <img src="6.jpg" alt="Teacher Profile" width="120" style="display: block; margin: 0 auto;">
+                <h3 class="profile-heading">Teacher Profile</h3>
+                <p><strong>Name: Juan Dela Cruz</strong></p>
+                <p><strong>Position: Grade 3 Instructor</strong></p>
+                <p><strong>Department: Elementary Department</strong></p>
+                <p><strong>Email: Cruz@gmail.com</strong></p>
+                <p><strong>Status: Active</strong></p>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <div class="cards1">
+                <img src="1.jpg" alt="English" width="300"><br>
+                <span><strong>Subject name: English </strong></span><br>
+                <button class="button">View Details</button>
+            </div>
+
+            <div class="cards2">
+                <img src="2.jpg" alt="Burger and Fries" width="300"><br>
+                <span><strong>Subject name: Math</strong></span><br>
+                <button class="button">View Details</button>
+            </div>
+
+            <div class="cards3">
+                <img src="3.jpg" alt="Tempura" width="300"><br>
+                <span><strong>Subject name: Science</strong></span><br>
+                <button class="button">View Details</button>
+            </div>
+
+            <div class="cards4">
+                <img src="4.jpg" alt="Tempura" width="300"><br>
+                <span><strong>Subject name: Computer Science</strong></span><br>
+                <button class="button">View Details</button>
+            </div>
+        </div>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</button>
+
+        <div class="footer">&copy; 2026 Teacher Dashboard. All Rights Reserved</div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
