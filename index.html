@@ -13,7 +13,7 @@ body{
 }
 
 .container{
-    max-width:1200px;
+    max-width:1300px;
     margin:auto;
     padding:20px;
 }
@@ -23,15 +23,19 @@ body{
     margin-bottom:25px;
 }
 
-/* SIDEBAR PROFILE */
+/* LAYOUT WRAPPER */
+.dashboard{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* SIDEBAR */
 .sidebar{
     background:white;
     padding:25px;
     border-radius:15px;
     box-shadow:0 4px 10px rgba(0,0,0,.1);
-    margin-bottom:35px;
-    display:flex;
-    justify-content:center;
 }
 
 .profile{
@@ -87,6 +91,25 @@ body{
     margin-top:40px;
     color:#555;
 }
+
+/* 💻 DESKTOP VIEW */
+@media (min-width: 900px){
+    .dashboard{
+        flex-direction:row;
+        align-items:flex-start;
+    }
+
+    .sidebar{
+        width:300px;
+        flex-shrink:0;
+        position:sticky;
+        top:20px;
+    }
+
+    .content{
+        flex:1;
+    }
+}
 </style>
 </head>
 
@@ -98,44 +121,49 @@ body{
         <h1>TEACHER DASHBOARD</h1>
     </div>
 
-    <!-- SIDEBAR BELOW TITLE -->
-    <div class="sidebar">
-        <div class="profile">
-            <img src="6.jpg">
-            <h3>Teacher Profile</h3>
-            <p><strong>Name:</strong> Juan Dela Cruz</p>
-            <p><strong>Position:</strong> Grade 3 Instructor</p>
-            <p><strong>Department:</strong> Elementary Department</p>
-            <p><strong>Email:</strong> Cruz@gmail.com</p>
-            <p><strong>Status:</strong> Active</p>
-        </div>
-    </div>
+    <!-- DASHBOARD LAYOUT -->
+    <div class="dashboard">
 
-    <!-- MAIN CONTENT -->
-    <div class="content">
-
-        <div>
-            <img src="1.jpg">
-            <strong>English</strong><br>
-            <button class="button">View Details</button>
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="6.jpg">
+                <h3>Teacher Profile</h3>
+                <p><strong>Name:</strong> Juan Dela Cruz</p>
+                <p><strong>Position:</strong> Grade 3 Instructor</p>
+                <p><strong>Department:</strong> Elementary Department</p>
+                <p><strong>Email:</strong> Cruz@gmail.com</p>
+                <p><strong>Status:</strong> Active</p>
+            </div>
         </div>
 
-        <div>
-            <img src="2.jpg">
-            <strong>Math</strong><br>
-            <button class="button">View Details</button>
-        </div>
+        <!-- MAIN CONTENT -->
+        <div class="content">
 
-        <div>
-            <img src="3.jpg">
-            <strong>Science</strong><br>
-            <button class="button">View Details</button>
-        </div>
+            <div>
+                <img src="1.jpg">
+                <strong>English</strong><br>
+                <button class="button">View Details</button>
+            </div>
 
-        <div>
-            <img src="4.jpg">
-            <strong>Computer Science</strong><br>
-            <button class="button">View Details</button>
+            <div>
+                <img src="2.jpg">
+                <strong>Math</strong><br>
+                <button class="button">View Details</button>
+            </div>
+
+            <div>
+                <img src="3.jpg">
+                <strong>Science</strong><br>
+                <button class="button">View Details</button>
+            </div>
+
+            <div>
+                <img src="4.jpg">
+                <strong>Computer Science</strong><br>
+                <button class="button">View Details</button>
+            </div>
+
         </div>
 
     </div>
