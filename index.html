@@ -23,7 +23,7 @@ body{
     margin-bottom:25px;
 }
 
-/* LAYOUT WRAPPER */
+/* LAYOUT */
 .dashboard{
     display:flex;
     flex-direction:column;
@@ -52,7 +52,6 @@ body{
     margin:5px 0;
 }
 
-/* MAIN CONTENT */
 .content{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -92,18 +91,17 @@ body{
     color:#555;
 }
 
-/* 💻 DESKTOP VIEW */
+/* 💻 DESKTOP MODE */
 @media (min-width: 900px){
     .dashboard{
         flex-direction:row;
-        align-items:flex-start;
+        align-items:stretch; /* 🔥 makes sidebar reach footer height */
     }
 
     .sidebar{
         width:300px;
         flex-shrink:0;
-        position:sticky;
-        top:20px;
+        border-radius:15px 0 0 15px;
     }
 
     .content{
@@ -111,6 +109,7 @@ body{
     }
 }
 </style>
+
 </head>
 
 <body>
